@@ -44,9 +44,6 @@ def clean_brand(raw_brand):
     brand = re.sub(r"[^a-z0-9]", "", brand)  # Removing all non-alphanumeric chars
     return brand_aliases.get(brand, brand)  # Return mapped alias if exists
 
-# Read all input first
-data = []
-
 reader = csv.reader(sys.stdin)
 for row in reader:
     try:
@@ -56,6 +53,3 @@ for row in reader:
             print(f"{brand}\t{rating}")
     except:
         continue
-
-# Sort data by brand (alphabetically)
-data.sort(key=lambda x: x[0])
