@@ -37,6 +37,7 @@ brand_aliases = {
 
 
 def clean_brand(raw_brand):
+    # checks if the input raw_brand is empty
     if not raw_brand:
         return ""
     brand = raw_brand.lower().strip().replace(" ", "")
