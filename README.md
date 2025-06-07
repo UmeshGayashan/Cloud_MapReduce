@@ -90,6 +90,9 @@ hadoop jar /home/umeshgayashan/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.
 hdfs dfs -ls /user/umeshgayashan/output_avg_rating
 hdfs dfs -cat /user/umeshgayashan/output_avg_rating/part-00000
 ```
+### 7. **Output Visualization - in Visualization Brach**
+![Average Ratings of Major Brands](/brand_ratings_major.png)
+
 
 ---
 
