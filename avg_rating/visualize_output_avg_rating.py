@@ -38,14 +38,14 @@ ax = sns.barplot(
     palette="viridis",
     orient='h'
 )
+ax.tick_params(axis='y', labelsize=2)
 
 
-plt.title('Average Ratings of Major Smartphone Brands', fontsize=16, pad=15)
-plt.xlabel('Average Rating (1-5 Stars)', fontsize=12)
-plt.ylabel('Brand', fontsize=12)
+plt.title('Average Ratings of Smartphone Brands', fontsize=16, pad=15)
+plt.xlabel('Average Rating (1-5 Stars)', fontsize=10)
+plt.ylabel('Brand', fontsize=10)
 plt.xlim(0, 5)
 
-# Add value labels
 for p in ax.patches:
     width = p.get_width()
     plt.text(
@@ -53,9 +53,10 @@ for p in ax.patches:
         p.get_y() + p.get_height() / 2,
         '{:.2f}'.format(width),
         ha='left',
-        va='center'
+        va='center',
+        fontsize=3 
     )
+
 
 plt.tight_layout()
 plt.savefig('brand_ratings_major.png', dpi=300)
-# plt.show()  # Uncomment if running in a GUI environment

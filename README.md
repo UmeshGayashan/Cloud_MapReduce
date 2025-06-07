@@ -41,3 +41,14 @@ hadoop jar /home/umeshgayashan/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.
  hdfs dfs -ls /user/umeshgayashan/output_avg_rating
  
  hdfs dfs -cat /user/umeshgayashan/output_avg_rating/part-00000
+
+ ## Visualization
+
+### Create Virtual Environment
+python3 -m venv venv
+### Step: Activate Virtual Environment
+source venv/bin/activate
+### Step: Install Packages
+pip install pandas matplotlib seaborn
+### Step: Get png output
+python ./avg_rating/visualize_output_avg_rating.py
